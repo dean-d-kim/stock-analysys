@@ -9,12 +9,12 @@ function App() {
   const [selectedStock, setSelectedStock] = useState('005930');
 
   useEffect(() => {
-    axios.get('http://localhost:3000/api/stocks')
+    axios.get('http://124.54.191.68:3000/api/stocks')
       .then(res => setStocks(res.data));
 
     const interval = setInterval(() => {
       stocks.forEach(stock => {
-        axios.get(`http://localhost:3000/api/stocks/${stock.stock_code}/realtime`)
+        axios.get(`http://124.54.191.68:3000/api/stocks/${stock.stock_code}/realtime`)
           .then(res => {
             setRealtimeData(prev => ({
               ...prev,

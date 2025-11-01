@@ -6,7 +6,7 @@ function StockChart({ stockCode }) {
   const [data, setData] = useState([]);
 
   useEffect(() => {
-    axios.get(`http://localhost:3000/api/stocks/${stockCode}/daily`)
+    axios.get(`http://124.54.191.68:3000/api/stocks/${stockCode}/daily`)
       .then(res => {
         const formatted = res.data.reverse().map(item => ({
           date: item.trade_date.substring(5, 10),
