@@ -4,5 +4,6 @@ __pycache__/
 .env
 .env.local
 *.log
+logs/
 .DS_Store
 dist/
